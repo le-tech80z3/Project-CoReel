@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Flask Login Example
-</h1>
-<h2 class="subtitle">
-  Easy authentication and authorization in Flask.
-</h2>
+<body>
+  <nav class="navbar">
+    <div class="container">
+
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="{{ url_for('main.allreelemxs') }}" class="navbar-item">
+            All Reelemxs
+          </a>
+
+      </div>
+    </div>
+  </nav>
+  <h2 class="subtitle">
+    Easy authentication and authorization in Flask.
+  </h2>
+</body>
+
 {% endblock %}
