@@ -3,7 +3,7 @@
 {% block content %}
 <h1>{{ reelemx.title }}</h1>
 <p>{{ reelemx.body }}</p>
-<form method="POST"> 
+<form method="PUT" action="/reelemxs/{{reelemx.id}}">
   <h1>Edit Reelemx</h1>
     <div class="field">
       <div class="control">

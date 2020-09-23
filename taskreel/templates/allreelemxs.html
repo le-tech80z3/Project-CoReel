@@ -30,12 +30,12 @@
                     </div>
                 </div>
             </div>
-            <button class="button is-block is-info is-large is-fullwidth" type="submit">All Reelemx</button>
+            <button class="button is-block is-info is-large is-fullwidth" type="submit">Add Reelemx</button>
         </form>
         # All Reelemxs display list
         <div>
             {% for reel in reelemxs %}
-            <li><a href='/reelemxs/id'>{{reel.title}}</a></li>
+            <li><a href="/reelemxs/{{reel.id}}">{{reel.title}}</a></li>
             {% endfor %}
         </div>
     </div>

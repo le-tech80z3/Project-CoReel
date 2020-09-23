@@ -40,11 +40,10 @@ def reelemx_index_create():
 @api.route('/reelemxs/<int:id>', methods = ['GET', 'PUT'])
 def reelemx_show_put_delete(id):
   if request.method == 'GET':
-    
-      return get_reelemx(id)
+    return get_reelemx(id)
   if request.method == 'PUT':
-      return update_reelemx(
-          id,
-          title=request.form['title'],
-          body=request.form['body'])
+    return update_reelemx(
+        id,
+        title=request.form['title'],
+        body=request.form['body'])
               
