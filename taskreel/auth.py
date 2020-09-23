@@ -15,6 +15,10 @@ def signup():
 
 @auth.route('/login', methods=['POST'])
 def login_post():
+	# data = request.json
+	# print(data)
+	# email = data.email
+	# password = data.password
 	email = request.form.get('email')
 	password = request.form.get('password')
 	remember = True if request.form.get('remember') else False
@@ -23,11 +27,14 @@ def login_post():
 
 	if not user or not check_password_hash(user.password, password):
 		flash('Please check your login credentials and try again.')
+		# return jsonify(user=None)
 		return redirect(url_for('auth.login'))
 		
 	login_user(user, remember=remember)
+	# return jsonify(user)
+#return data to frontend
 	return redirect(url_for('main.profile'))
-
+	
 @auth.route('/signup', methods=['POST'])
 def signup_post():
 	email = request.form.get('email')

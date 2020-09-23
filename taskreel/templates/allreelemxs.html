@@ -11,13 +11,14 @@
                 </div>
             {% endif %}
         {% endwith %}
-        <form method="POST" action="/">
+        <form method="POST" action="/reelemxs">
             <div class="field">
                 <div class="control">
                     <div class="reelemx">
                         <div class="container">
                             <div class="Title">
                                 <input class="user input-field" type="text" name="title" placeholder="Name your Reelemx">
+                                <input type="hidden" name="user_id" value={{ id }}>
                             </div>
                         </div>
 
@@ -29,8 +30,14 @@
                     </div>
                 </div>
             </div>
-            <button class="button is-block is-info is-large is-fullwidth" link={{'/reelemxs'}} type="submit">All Reelemx</button>
+            <button class="button is-block is-info is-large is-fullwidth" type="submit">All Reelemx</button>
         </form>
+        # All Reelemxs display list
+        <div>
+            {% for reel in reelemxs %}
+            <li><a href='/reelemxs/id'>{{reel.title}}</a></li>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

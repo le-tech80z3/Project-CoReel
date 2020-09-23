@@ -35,13 +35,13 @@ class Reelemx(db.Model):
     def __repr__(self):
         return f"Reelemx(id={self.id}, title={self.title}, user_id={self.user_id})"
 
-# class Endulxsolo(db.Model):
-#     __tablename__ = 'endulxsolos'
+# class Prtapl(db.Model):
+#     __tablename__ = 'prtapls'
 
 #     id = db.Column(db.Integer, primary_key=True)
-#     endulxsolo = db.Column(db.String(50), unique=True, nullable=False)
+#     Prtapl = db.Column(db.String(50), unique=True, nullable=False)
 #     reelemx_id = db.Column(db.Integer, db.ForeignKey('reelemxs.id', ondelete='SET NULL'))
 #     def __repr__(self):
-#         return f"Endulxsolo(id={self.id}, endulxsolo={self.endulxsolo})"
+#         return f"Prtapl(id={self.id}, prtapl={self.prtapl})"
 #     def as_dict(self):
 #         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
